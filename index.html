@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeYogi Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+ <div id="header">
+     
+      <div class="search-box">
+
+  <select id="searchDistrict">
+  
+  <option>Jaipur</option>
+<option>Jodhpur</option>
+<option>Bikaner</option>
+<option>Churu</option>
+<option>Sikar</option>
+<option>Ajmer</option>
+<option>Udaipur</option>
+<option>Kota</option>
+<option>Alwar</option>
+<option>Bharatpur</option>
+<option>Pali</option>
+<option>Nagaur</option>
+<option>Jhunjhunu</option>
+<option>Hanumangarh</option>
+<option>Ganganagar</option>
+<option>Barmer</option>
+<option>Jaisalmer</option>
+<option>Jalore</option>
+<option>Sawai Madhopur</option>
+<option>Dausa</option>
+<option>Karauli</option>
+<option>Tonk</option>
+<option>Bundi</option>
+<option>Bhilwara</option>
+<option>Rajsamand</option>
+<option>Pratapgarh</option>
+<option>Banswara</option>
+<option>Dungarpur</option>
+<option>Chittorgarh</option>
+<option>Sirohi</option>
+<option>Baran</option>
+<option>Jhalawar</option>
+<option>Dholpur</option>
+</select>
+
+<select id="searchBlood">
+  
+ <option>A+</option>
+  <option>A-</option>
+  <option>B+</option>
+  <option>B-</option>
+  <option>AB+</option>
+  <option>AB-</option>
+  <option>O+</option>
+  <option>O-</option>
+</select>
+
+<button id="abc" onclick="searchDonor()">Search</button>
+        
+      
+      </div>
+    <div class="button"> 
+     <button onclick="showHome()">HOME</button>
+<button onclick="showProfile()">Profile</button>
+    </div>
+   
+ </div>  
+<div id="searchResult"></div>
+<div id="main">
+  
+    <h1 class="mainheading">  BLOOD DONOR FINDER</h1>
+  
+  <div class="jitu1" id="home">
+   
+  <button class="main-btn btn-register" onclick="openForm()">
+   Donor Registration
+</button>
+
+<button class="main-btn btn-find" onclick="openFinder()">
+   Blood Request
+</button>
+   
+</div>
+  <div id="profile">
+  <h1>ABOUT ME</H1>
+  <P>मेरा नाम जितेंद्र है।मैं बीए के प्रथम सेमेस्टर का विधार्थी हूं।मै कोड योगी से कक्षा 12 से जुड़ा हूं।जब मुझे हमारे विद्यालय राउमावि भाड़ग के प्रधानाचार्य श्री रामनिवास ने 21 वीं सदी की आवश्यकता ऐप्स और वेबसाईट डिजाइनिंग कोर्स कोड योगी के बारे में बताया।कोड योगी जैसे प्लेटफॉर्म से मुझे ऐप्स और वेबसाइट डिजाइनिंग और कोडिंग का प्रशिक्षण मिला।मैं कोड योगी टीम के समस्त प्रशिक्षकों, माननीय जिला कलेक्टर श्री अभिषेक सुराणा तथा प्रधानाचार्य श्री रामनिवास का आभार प्रकट करता हूं।
+</p>
+</div>
+
+<div id="donorForm" >
+
+<h2> Blood Donor Registration</h2>
+
+<form  id="registerForm" class="donor-form">
+
+
+<label>Full Name</label>
+<input type="text" id="name" required>
+
+
+<label>Age (18 to 65)</label>
+<input type="number" min="18" max="65" id="age" required>
+
+
+<label>Gender</label>
+<select id="gender" required>
+  <option>Select</option>
+  <option>Male</option>
+  <option>Female</option>
+</select>
+
+
+<label>Blood Group</label>
+<select id="blood" required>
+  <option>A+</option>
+  <option>A-</option>
+  <option>B+</option>
+  <option>B-</option>
+  <option>AB+</option>
+  <option>AB-</option>
+  <option>O+</option>
+  <option>O-</option>
+</select>
+
+
+<label>Phone Number</label>
+<input type="tel" id="phone" pattern="[0-9]{10}" required>
+
+
+<label>Email (Optional)</label>
+<input id="email" type="email">
+
+
+<label>Districts</label>
+<select id="district" required>
+<option>Jaipur</option>
+<option>Jodhpur</option>
+<option>Bikaner</option>
+<option>Churu</option>
+<option>Sikar</option>
+<option>Ajmer</option>
+<option>Udaipur</option>
+<option>Kota</option>
+<option>Alwar</option>
+<option>Bharatpur</option>
+<option>Pali</option>
+<option>Nagaur</option>
+<option>Jhunjhunu</option>
+<option>Hanumangarh</option>
+<option>Ganganagar</option>
+<option>Barmer</option>
+<option>Jaisalmer</option>
+<option>Jalore</option>
+<option>Sawai Madhopur</option>
+<option>Dausa</option>
+<option>Karauli</option>
+<option>Tonk</option>
+<option>Bundi</option>
+<option>Bhilwara</option>
+<option>Rajsamand</option>
+<option>Pratapgarh</option>
+<option>Banswara</option>
+<option>Dungarpur</option>
+<option>Chittorgarh</option>
+<option>Sirohi</option>
+<option>Baran</option>
+<option>Jhalawar</option>
+<option>Dholpur</option>
+</select>
+
+<label>Address</label>
+<textarea id="address" required></textarea>
+
+
+<label>Pincode (6 digits)</label>
+<input type="text" id="pincode" pattern="[0-9]{6}" required>
+
+
+<label>Last Donated Date</label>
+<input id="lastDonate" type="date">
+
+
+<label>Availability Status</label>
+<select id="status" required>
+  <option>Available</option>
+  <option>Unavailable</option>
+</select>
+
+
+<button id="jl" type="submit">Sign Up</button>
+
+</form>
+</div>
+  <div id="finderForm">
+
+  <h2>Blood Finder Request</h2>
+
+  <form class="donor-form">
+
+    <label>District</label>
+    <select id="district1" required >
+      <option>Select District</option>
+      <option>Jaipur</option>
+<option>Jodhpur</option>
+<option>Bikaner</option>
+<option>Churu</option>
+<option>Sikar</option>
+<option>Ajmer</option>
+<option>Udaipur</option>
+<option>Kota</option>
+<option>Alwar</option>
+<option>Bharatpur</option>
+<option>Pali</option>
+<option>Nagaur</option>
+<option>Jhunjhunu</option>
+<option>Hanumangarh</option>
+<option>Ganganagar</option>
+<option>Barmer</option>
+<option>Jaisalmer</option>
+<option>Jalore</option>
+<option>Sawai Madhopur</option>
+<option>Dausa</option>
+<option>Karauli</option>
+<option>Tonk</option>
+<option>Bundi</option>
+<option>Bhilwara</option>
+<option>Rajsamand</option>
+<option>Pratapgarh</option>
+<option>Banswara</option>
+<option>Dungarpur</option>
+<option>Chittorgarh</option>
+<option>Sirohi</option>
+<option>Baran</option>
+<option>Jhalawar</option>
+<option>Dholpur</option>
+    </select>
+
+    <label>Blood Group</label>
+    <select id="blood1" required>
+      <option>Select Blood Group</option>
+      <option>A+</option><option>A-</option>
+      <option>B+</option><option>B-</option>
+      <option>AB+</option><option>AB-</option>
+      <option>O+</option><option>O-</option>
+    </select>
+
+    <label>Mobile Number</label>
+    <input type="tel" pattern="[0-9]{10}" id="phone1" required>
+
+    <label>Email (Optional)</label>
+    <input id="email1" type="email">
+
+    <button type="submit">Request Blood</button>
+
+  </form>
+</div>
+</div>
+
+ <div id="footer">
+   <h1 class="jk">🩸DONATE BLOOD , SAVE LIFE'S🩸</h1>
+ </div>                                                                 
+    <script src="script.js"></script>
+  </body>
+</html>
