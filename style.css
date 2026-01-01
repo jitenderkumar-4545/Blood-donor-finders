@@ -1,0 +1,235 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 20px;
+  min-height: 70px;
+  background: linear-gradient(to right, #8E0000, #C62828);
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button button {
+  background: yellow;
+  color: black;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 2px solid #ff4d4d;
+  cursor: pointer;
+  
+}
+
+.button button:hover {
+  background: black;
+  color: white;
+}
+
+.mainheading {
+  font-size: clamp(18px, 4vw, 32px);
+  padding: 8px 16px;
+  background: lightpink;
+  border-radius: 10px;
+  border: 2px solid yellow;
+  text-align: center;
+  
+}
+
+#main {
+  min-height: calc(100vh - 70px);
+padding: 40px 15px;
+  background-image: url("https://media.istockphoto.com/id/2154964150/photo/the-concept-of-donation-blood-transfusion.jpg?s=612x612&w=0&k=20&c=EPcXA2NNoTk6vRYRDIwAgXf9UFMKu1K2nlnCzoRtD64=");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  justify-content: center;
+align-items: center;
+  
+}
+
+.jitu1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.main-btn {
+  width: min(90%, 320px);
+  padding: 16px;
+  font-size: clamp(16px, 4vw, 22px);
+  font-weight: bold;
+  border-radius: 14px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.btn-register,
+.btn-find {
+  background: #b71c1c;
+  color: white;
+  border-color: #b71c1c;
+}
+
+.btn-register:hover,
+.btn-find:hover {
+  background: white;
+  color: #b71c1c;
+}
+
+#profile {
+  display: none;
+  background: pink;
+  padding: 40px;
+  text-align: center;
+}
+
+#profile p {
+  max-width: 900px;
+  margin: 20px auto 0;
+  padding: 22px 26px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 14px;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+  border: 6px solid #b71c1c;
+}
+
+
+#donorForm,
+#finderForm {
+  display: none;
+  background: lightgray;
+  padding: 20px;
+  max-width: 600px;
+  border: 5px solid black;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.donor-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.donor-form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.donor-form input,
+.donor-form select,
+.donor-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 14px;
+}
+
+.donor-form textarea,
+.donor-form button {
+  grid-column: span 2;
+}
+
+.donor-form button {
+  background: #ff4d4d;
+  color: white;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ff4d4d;
+  cursor: pointer;
+  width: 50%;
+  margin: auto;
+}
+
+.donor-form button:hover {
+  background: darkred;
+}
+
+#searchResult div {
+  max-width: 600px;
+  margin: 10px auto;
+  background: #fff2f2;
+  border-left: 6px solid red;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: clamp(14px, 3.5vw, 16px);
+}
+
+#searchResult div b {
+  color: darkred;
+}
+
+
+#footer {
+  padding: 15px;
+  background: skyblue;
+  text-align: center;
+}
+
+.jk {
+  font-size: clamp(18px, 4vw, 28px);
+}
+
+
+@media (max-width: 700px) {
+  
+  #header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .button button {
+    width: 100%;
+  }
+  
+  .donor-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .donor-form button {
+    width: 100%;
+  }
+  
+
+  .button {
+    flex-direction: row;
+  }
+
+  .button button {
+    width: auto;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+}      
